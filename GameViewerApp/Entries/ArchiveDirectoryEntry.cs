@@ -48,7 +48,7 @@ namespace GameViewerApp.Entries
         public IEnumerable<IGameDataEntry> GetEntries()
         {
             var dirs = m_directory.GetDirectories().Select(a => new ArchiveDirectoryEntry(a));
-            var files = m_directory.GetFiles().Select(a => new ArchiveFileEntry(a));
+            var files = m_directory.GetFiles().Select(a => GetEntry(a.Name));
 
             return dirs.Cast<IGameDataEntry>().Concat(files);
         }
