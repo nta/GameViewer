@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameViewerApp", "GameViewerApp\GameViewerApp.csproj", "{C4A176A6-D911-4A45-84DE-97BFA74EE21D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageLib", "RageLib\RageLib.csproj", "{7A270675-C912-4570-B5C3-2DD215571BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageLib.GTA5", "RageLib.GTA5\RageLib.GTA5.csproj", "{4F26BD1F-74EE-4C52-B5FF-764433D4B958}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4A176A6-D911-4A45-84DE-97BFA74EE21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A176A6-D911-4A45-84DE-97BFA74EE21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A176A6-D911-4A45-84DE-97BFA74EE21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A176A6-D911-4A45-84DE-97BFA74EE21D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A270675-C912-4570-B5C3-2DD215571BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A270675-C912-4570-B5C3-2DD215571BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A270675-C912-4570-B5C3-2DD215571BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A270675-C912-4570-B5C3-2DD215571BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F26BD1F-74EE-4C52-B5FF-764433D4B958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F26BD1F-74EE-4C52-B5FF-764433D4B958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F26BD1F-74EE-4C52-B5FF-764433D4B958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F26BD1F-74EE-4C52-B5FF-764433D4B958}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
