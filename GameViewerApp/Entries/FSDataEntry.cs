@@ -39,7 +39,7 @@ namespace GameViewerApp.Entries
             var dirs = Directory.GetFiles(m_path);
             var files = Directory.GetDirectories(m_path);
 
-            return dirs.Concat(files).Select(a => a.Replace(m_path, "")).Select(GetEntry);
+            return dirs.Concat(files).Select(a => a.Replace(m_path, "").Substring(1)).Select(GetEntry);
         }
     }
 }
