@@ -6,7 +6,7 @@ using GameViewerApp.Entries;
 
 namespace GameViewerApp
 {
-    internal class GameData
+    public class GameData
     {
         private string m_gameDir;
 
