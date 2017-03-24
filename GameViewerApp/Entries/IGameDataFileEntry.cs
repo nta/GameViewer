@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace GameViewerApp.Entries
 {
-    interface IGameDataFileEntry : IGameDataEntry
+    public interface IGameDataFileEntry : IGameDataEntry
     {
         long Size { get; }
 
