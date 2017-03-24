@@ -25,12 +25,19 @@ namespace GameViewerApp.Entries
             }
             else
             {
-                if (Path.GetExtension(combinedPath).EndsWith("rpf"))
+                if (File.Exists(combinedPath))
                 {
-                    return ArchiveFile.GetFromCache(combinedPath);
-                }
+                    if (Path.GetExtension(combinedPath).EndsWith("rpf"))
+                    {
+                        return ArchiveFile.GetFromCache(combinedPath);
+                    }
 
-                return new FSFileEntry(combinedPath);
+                    return new FSFileEntry(combinedPath);
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
