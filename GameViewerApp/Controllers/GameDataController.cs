@@ -24,7 +24,7 @@ namespace GameViewerApp.Controllers
         {
             try
             {
-                var entry = m_gameData.GetEntryAtPath(path);
+                var entry = m_gameData.GetEntryAtPath(path ?? "");
 
                 if (entry is IGameDataFileEntry fileEntry)
                 {
