@@ -44,12 +44,12 @@ namespace GameViewerApp.Controllers
                     {
                         Type = "Directory",
                         Name = dirEntry.Name,
-                        Directories = entries.Where(a => a is IGameDataDirectoryEntry).Select(a => a.Name),
+                        Directories = entries.Where(a => a is IGameDataDirectoryEntry).Select(a => a.Name).OrderBy(a => a),
                         Files = entries.Where(a => a is IGameDataFileEntry).Select(a => new
                         {
                             Name = a.Name,
                             Size = ((IGameDataFileEntry)a).Size
-                        }),
+                        }).OrderBy(a => a.Name),
                         FullEntry = path
                     });
                 }
