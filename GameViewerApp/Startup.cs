@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Routing;
 
+using GameViewerApp.Entries;
+
 namespace GameViewerApp
 {
     public class Startup
