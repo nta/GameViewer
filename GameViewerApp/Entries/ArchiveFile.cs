@@ -15,7 +15,7 @@ namespace GameViewerApp.Entries
                 return value;
             }
 
-            var entry = new ArchiveDirectoryEntry(RageArchiveWrapper7.Open(File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read), Path.GetFileName(path)).Root);
+            var entry = new ArchiveDirectoryEntry(RageArchiveWrapper7.Open(File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read), Path.GetFileName(path)).Root, Path.GetFileName(path));
             ms_archiveCache.Add(path, entry);
 
             return entry;

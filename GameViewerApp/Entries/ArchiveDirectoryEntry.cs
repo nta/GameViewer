@@ -9,12 +9,14 @@ namespace GameViewerApp.Entries
     public class ArchiveDirectoryEntry : IGameDataDirectoryEntry
     {
         private IArchiveDirectory m_directory;
+        private string m_nameOverride;
 
-        public string Name => m_directory.Name;
+        public string Name => m_nameOverride ?? m_directory.Name;
 
-        public ArchiveDirectoryEntry(IArchiveDirectory directory)
+        public ArchiveDirectoryEntry(IArchiveDirectory directory, string nameOverride = null)
         {
             m_directory = directory;
+            m_nameOverride = nameOverride;
         }
 
         public IGameDataEntry GetEntry(string name)
@@ -27,7 +29,7 @@ namespace GameViewerApp.Entries
                 {
                     var binaryFile = (IArchiveBinaryFile)file;
 
-                    return new ArchiveDirectoryEntry(RageArchiveWrapper7.Open(binaryFile.GetStream(), binaryFile.Name).Root);
+                    return new ArchiveDirectoryEntry(RageArchiveWrapper7.Open(binaryFile.GetStream(), binaryFile.Name).Root, binaryFile.Name);
                 }
 
                 return new ArchiveFileEntry(file);
