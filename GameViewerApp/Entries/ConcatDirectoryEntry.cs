@@ -35,6 +35,8 @@ namespace GameViewerApp.Entries
 
         public IGameDataEntry GetEntry(string name)
         {
+            var entries = new List<IGameDataEntry>();
+
             foreach (var dir in m_directories)
             {
                 try
@@ -43,13 +45,32 @@ namespace GameViewerApp.Entries
 
                     if (entry != null)
                     {
-                        return entry;
+                        entries.Add(entry);
                     }
                 }
                 catch { }
             }
 
-            return null;
+            // early out for 0 entries
+            if (entries.Count == 0)
+            {
+                return null;
+            }
+
+            // early out for a single entry
+            if (entries.Count == 1)
+            {
+                return entries[0];
+            }
+
+            // if these aren't directories, fail
+            if (!entries.All(a => a is IGameDataDirectoryEntry))
+            {
+                return null;
+            }
+
+            // return another merged entry
+            return new ConcatDirectoryEntry(entries.First().Name, entries.Cast<IGameDataDirectoryEntry>());
         }
     }
 }
